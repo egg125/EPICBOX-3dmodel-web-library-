@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+
+:root {
+  --var-fondo: #b5bfa7;
+  --var-botones: #f4cb7c;
+  --var-fondo-formulario: #243443;
+  --var-blanco: #ffffff;
+  --var-borde-inputs: #e0e0e0;
+  --var-texto-botones: #000000;
+}
+
+body {
+  background-color: var(--var-fondo);
+  font-family: "Inter", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+h2 {
+  color: var(--var-blanco);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.register-container {
+  background-color: var(--var-fondo-formulario);
+  border-radius: 20px;
+  padding: 2rem;
+  width: 320px;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  color: var(--var-blanco);
+  font-size: 0.9rem;
+  text-align: left;
+  margin-bottom: 0.3rem;
+}
+
+input {
+  background-color: var(--var-blanco);
+  border: 2px solid var(--var-borde-inputs);
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+
+
+button {
+  background-color: var(--var-botones);
+  color: var(--var-texto-botones);
+  border: none;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #d9a939;
+}
+
+.login-text {
+  color: var(--var-blanco);
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+.login-link {
+  color: var(--var-botones);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-link:hover {
+  text-decoration: underline;
+}
+
+.password-strength {
+  margin-top: 0.2rem; /* Reduce el margen superior para pegarlo más al campo de contraseña */
+  height: 8px;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.strength-bar {
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+.strength-0 {
+  background-color: #ff4d4d; /* Muy débil */
+}
+
+.strength-1 {
+  background-color: #ff7f50; /* Débil */
+}
+
+.strength-2 {
+  background-color: #ffd700; /* Moderada */
+}
+
+.strength-3 {
+  background-color: #9acd32; /* Fuerte */
+}
+
+.strength-4 {
+  background-color: #32cd32; /* Muy fuerte */
+}
+
+.strength-label {
+  margin-top: 0.3rem; /* Reduce el margen superior del texto */
+  font-size: 0.85rem; /* Ajusta el tamaño del texto */
+  color: #555;
+  text-align: left; /* Alinea el texto a la izquierda */
+}
+
+.error-text {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: -0.5rem;
+  margin-bottom: 1rem;
+}

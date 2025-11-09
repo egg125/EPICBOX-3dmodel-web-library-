@@ -1,0 +1,31 @@
+.header-nav {
+  position: fixed; /* Fija el nav justo debajo del header */
+  top: 80px; /* Ajusta este valor según la altura del header */
+  left: 0;
+  background-color: #1e2a38; /* Color de fondo del nav */
+  padding: 0.5rem 1rem; /* Espaciado interno */
+  width: 100%; /* Asegura que ocupe todo el ancho */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra opcional */
+  z-index: 999; /* Asegura que esté debajo del header pero encima del contenido */
+}
+
+.nav-list {
+  display: flex;
+  justify-content: flex-start; /* Alinea los elementos a la izquierda */
+  gap: 1rem; /* Espaciado entre los elementos */
+  list-style: none; /* Elimina los puntos de la lista */
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.nav-item:hover {
+  color: #f4cb7c; /* Cambia el color al pasar el mouse */
+}

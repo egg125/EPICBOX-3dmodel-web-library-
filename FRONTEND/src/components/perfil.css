@@ -1,0 +1,360 @@
+.perfil-select-container {
+  position:fixed;
+  left: 40px;
+  z-index: 1000;
+  display: inline-block;
+}
+
+.perfil-select {
+  background-color: #2c3e50;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  appearance: auto; 
+  -webkit-appearance: auto;
+  -moz-appearance: auto;
+}
+
+.delete-button {
+  color: black;
+  cursor: pointer;
+  padding: 0.4em 0.6em;
+  background-color: #ffbc41;
+  transition: 0.3s ease-in-out;
+}
+
+
+.delete-button:hover {
+
+  background-color: #ff4d4d;
+  padding: 0.5em;
+  color:white;
+  transition: ease-in-out 0.3s;
+
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.confirm-button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.confirm-button:hover {
+  background-color: #45a049;
+}
+
+.cancel-button {
+  background-color: #f44336;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cancel-button:hover {
+  background-color: #e53935;
+}
+
+.perfil-container {
+  padding: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.user-name-display {
+  position: fixed;
+  top: 120px;     
+  right: 50px;    
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  z-index: 1001;
+}
+
+
+/*mis assets*/
+.assets-wrapper {
+  background-color: #405D5B;
+  border-radius: 16px;
+  padding: 24px 32px;
+  margin-top: 65px;
+  width: 1425px;
+  margin-left:-200px;
+  
+}
+
+.assets-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px; 
+  justify-content: flex-start; 
+}
+
+
+/* Cada asset (card) */
+.asset-card {
+  background-color: #1e3a5c;
+  border-radius: 12px;
+  padding: 8px;
+  color: white;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 220px;
+  width: 160px;
+}
+.asset-card:hover {
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
+}
+
+.asset-image-container {
+  width: 100%;
+  height: 80%;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2a4a6b;
+}
+
+.asset-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Título del asset */
+.asset-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 6px;
+  width: 100%;
+  text-align: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+
+.assets-title {
+  color: white;
+  font-size: 23px;
+  font-weight: 700;
+  margin-top:-7px;
+  margin-bottom: 20px;
+  text-align: left; 
+}
+
+.download-history-wrapper {
+  background-color: #405D5B;
+  border-radius: 16px;
+  padding: 24px 32px;
+  margin-top: 65px;
+  width: 1425px;
+  margin-left:-200px;
+  
+}
+
+.download-history-wrapper h2 {
+  font-size: 23px;
+  font-weight: 700;
+  margin-top: -7px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+/* Contenedor que muestra los assets en fila */
+.history-assets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: flex-start;
+}
+
+/* Cada asset en el historial */
+.history-asset {
+  background-color: #1e3a5c;
+  border-radius: 12px;
+  padding: 8px;
+  color: white;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 220px;
+  width: 160px;
+}
+
+.history-asset:hover {
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
+}
+
+.history-asset img {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 6px;
+}
+
+/* Solo título, sin fecha */
+.history-asset .asset-title {
+  font-size: 14px;
+  font-weight: 600;
+  width: 100%;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Responsive para tablets */
+@media (max-width: 1200px) {
+  .assets-wrapper,
+  .download-history-wrapper {
+    width: 98vw;
+    margin-left: 0;
+    padding: 16px 10px;
+  }
+  .assets-grid,
+  .history-assets {
+    gap: 18px;
+  }
+}
+
+/* Responsive para móviles */
+@media (max-width: 800px) {
+  .perfil-container {
+    padding: 8px;
+    max-width: 100vw;
+  }
+  .user-name-display {
+    top: 90px;
+    right: 10px;
+    font-size: 16px;
+  }
+  .perfil-select-container {
+    left: 10px;
+  }
+  .perfil-select {
+    font-size: 16px;
+    padding: 6px 10px;
+  }
+  .assets-wrapper,
+  .download-history-wrapper {
+    width: 100vw;
+    margin-left: 0;
+    padding: 8px 2vw;
+    border-radius: 10px;
+  }
+  .assets-title,
+  .download-history-wrapper h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .assets-grid,
+  .history-assets {
+    gap: 10px;
+  }
+  .asset-card,
+  .history-asset {
+    width: 110px;
+    height: 140px;
+    padding: 4px;
+    font-size: 12px;
+  }
+  .asset-title {
+    font-size: 11px;
+    margin-top: 3px;
+  }
+  .asset-image-container,
+  .history-asset img {
+    height: 70px;
+    border-radius: 6px;
+  }
+  .delete-button {
+    font-size: 11px;
+    padding: 0.3em 0.5em;
+  }
+}
+
+/* Ultra compacto para móviles pequeños */
+@media (max-width: 500px) {
+  .perfil-container {
+    padding: 2px;
+  }
+  .user-name-display {
+    top: 70px;
+    right: 4px;
+    font-size: 13px;
+  }
+  .perfil-select {
+    font-size: 13px;
+    padding: 4px 6px;
+  }
+  .assets-wrapper,
+  .download-history-wrapper {
+    padding: 4px 1vw;
+    border-radius: 6px;
+  }
+  .assets-title,
+  .download-history-wrapper h2 {
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+  .asset-card,
+  .history-asset {
+    width: 80px;
+    height: 90px;
+    font-size: 10px;
+    padding: 2px;
+  }
+  .asset-title {
+    font-size: 9px;
+    margin-top: 2px;
+  }
+  .asset-image-container,
+  .history-asset img {
+    height: 40px;
+    border-radius: 4px;
+  }
+  .delete-button {
+    font-size: 9px;
+    padding: 0.2em 0.3em;
+  }
+}

@@ -1,0 +1,39 @@
+.modal-backdrop {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+.modal-content {
+  background: #fff;
+  padding: 32px 24px 16px 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  min-width: 280px;
+  max-width: 90vw;
+  text-align: center;
+  position: relative;
+}
+.modal-close-btn {
+  margin-top: 18px;
+  background: #1e3a5c;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 24px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+/* Añade esto a Modal.css o ver_modelo.css */
+.modal-login-link {
+  display: inline-block;
+  margin-top: 12px;
+  color: #1e3a5c;
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
+}

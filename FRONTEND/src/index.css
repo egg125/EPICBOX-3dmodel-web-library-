@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+  padding-top: 0; /* Elimina el padding extra aquí */
+  font-family: ...;
+    min-width: 771px;
+
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+

@@ -1,0 +1,440 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+
+:root {
+  --var-fondo: #b5bfa7;
+  --var-botones: #f4cb7c;
+  --var-fondo-formulario: #243443;
+  --var-fondo-verde: #405D5B;
+  --var-blanco: #ffffff;
+  --var-borde-inputs: #e0e0e0;
+  --var-placeholder-color: #666666;
+  --var-texto-botones: #000000;
+}
+
+body {
+  background-color: var(--var-fondo);
+  font-family: "Inter", sans-serif;
+  align-items: center;
+  margin: 0;
+}
+
+h2 {
+  color: var(--var-blanco);
+  margin-bottom: 0.5rem;
+  font-size:1.1em;
+  text-align: center;
+}
+
+.description-container {
+  background-color: var(--var-fondo-formulario);
+  border-radius: 20px;
+  color: white;
+  padding: 0.5rem;
+  margin-top: 0;
+  margin-left: 1em;
+  width: 280px;
+  text-align: center;
+}
+.description-container button{
+  margin:0;
+  font-size: 0.8em;
+}
+a {
+  color: var(--var-botones);
+}
+.delete-button{
+  background: none;
+  color:white;
+  font-size:0.8em;
+  margin: 1em;
+  padding:0;
+}
+.delete-button:hover{
+  background: none;
+  color:red;
+  margin: 1em;
+  padding:0;
+}
+.opinion-container {
+  background-color: var(--var-fondo-formulario);
+  border-radius: 20px;
+  color: white;
+  padding: 0.5rem;
+  margin-top: 1em;
+  margin-left: 1em;
+  width: 280px;
+}
+.opinion-container textarea{
+  height: 5%;
+}
+.rating-container {
+  display: flex;
+  gap: 5px;
+  margin: 10px 0;
+}
+
+.star {
+  font-size: 24px;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.star.filled {
+  color: #ffbc41;
+}
+.rating-stars-container {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.2rem;
+}
+/* Sistema de valoración mejorado */
+.rating-display {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  justify-content: center;
+}
+
+.stars-display {
+  position: relative;
+  display: inline-block;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+}
+
+.stars-background {
+  color: #ccc; /* Color de estrellas vacías */
+}
+
+.stars-foreground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  color: #ffc107; /* Color de estrellas llenas */
+}
+
+.rating-value-display {
+  margin-left: 8px;
+  font-size: 1rem;
+  color: #ffc107;
+  font-weight: bold;
+  background: rgba(0,0,0,0.2);
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+.half-star {
+  color: #ffc107;
+}
+
+.half-star::after {
+  content: '★';
+  position: absolute;
+  left: 0;
+  width: 50%;
+  overflow: hidden;
+  color: #ccc;
+}
+
+.rating-value {
+  margin-left: 5px;
+  font-size: 0.9rem;
+  color: #666;
+}
+.big-comment-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 1em;
+  width: 50%;
+  /* Cambiado de max-width a width para tamaño fijo */
+  max-width: 400px;
+  /* Altura máxima (ajusta según necesites) */
+  overflow-y: auto;
+  /* Scroll vertical si el contenido excede la altura */
+  align-items: flex-start;
+  /* Alinea items al inicio (evita estiramiento) */
+  padding: 0.5em;
+  /* Espacio interno para evitar cortes */
+  box-sizing: border-box;
+  /* Incluye padding en el ancho total */
+  background-color: transparent;
+  /* Fondo transparente para no afectar diseño */
+  border: none;
+  /* Sin bordes que puedan afectar el tamaño */
+}
+
+.comment-container {
+  background-color: var(--var-fondo-formulario);
+  border-radius: 20px;
+  color: white;
+  padding: 1.5rem;
+  max-width: 400px; 
+  /* Reducido para mejor espacio */
+  margin-bottom: 1em;
+  /* Margen inferior en lugar de superior */
+  box-sizing: border-box;
+  flex-shrink: 0;
+  /* Evita que se encojan los items */
+}
+
+.comment-container p {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  white-space: normal;
+  margin: 0;
+  /* Elimina márgenes por defecto de <p> */
+}
+
+.comment-container h2 {
+  margin-left: 0;
+  align-items: start;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1em;
+  justify-content: space-between;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+label {
+  color: var(--var-blanco);
+  font-size: 1.3em;
+  text-align: left;
+  margin-bottom: 0.3rem;
+}
+
+input {
+  background-color: var(--var-blanco);
+  border: 2px solid var(--var-borde-inputs);
+  padding: 0.6rem;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+textarea {
+  background-color: var(--var-blanco);
+  padding: 0;
+  width: 90%;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.ver-modelo-image {
+  max-width: 800px;
+  max-height: 700px;
+  border-radius: 50px;
+}
+
+.image-controls-numbers {
+  display: flex;
+  padding: 1em;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1em;
+  margin-left: 1em;
+}
+.image-button {
+  background-color: var(--var-botones);
+  color: var(--var-texto-botones);
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0 0.3rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.image-button:hover {
+  background-color: #243443; /* Color al pasar el cursor */
+  color:white;
+  transform: scale(1.1); /* Efecto de agrandamiento */
+}
+
+.image-button.active {
+  background-color:#405D5B; /* Color del botón activo */
+  color:white; /* Color del texto del botón activo */
+  font-weight: bold; /* Resaltar el texto del botón activo */
+  transform: scale(1.1); /* Efecto visual para el botón activo */
+}
+.image-controls-numbers>button {
+  margin-left: 1em;
+  font-size: 1.5em;
+}
+
+.sin_borde {
+  border: none;
+  background: none;
+  margin:0;
+  color: var(--var-blanco);
+  font-size: 1rem;
+}
+
+.sin_borde:hover {
+  background: none;
+  color: var(--var-botones);
+}
+
+.image-container {
+  position: relative;
+  background: none;
+  height: 24em;
+}
+.image-container img{ 
+  width: max-content;
+}
+.expand-button {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background:none;
+  color: white;
+  cursor: pointer;
+  font-size: 3em;
+}
+
+.expand-button:hover {
+  background:none;
+  color:#b5bfa7;
+}
+
+.expanded-image-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.expanded-image {
+  width: 40%;
+  border-radius: 10px;
+}
+
+.close-button {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  background: none;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 0.5rem;
+  cursor: pointer;
+  font-size: 2.5rem;
+}
+
+.close-button:hover {
+  background:none;
+  color:#b5bfa7;
+}
+button {
+  background-color: var(--var-botones);
+  color: var(--var-texto-botones);
+  border: none;
+  padding: 0.8rem;
+  font-size: 0.5rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: white;
+}
+
+.register-text {
+  color: var(--var-blanco);
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+.register-link {
+  color: var(--var-botones);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.register-link:hover {
+  text-decoration: underline;
+}
+
+.error-text {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: -0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Modal oscuro centrado para el visor 3D */
+.visor3d-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(20, 20, 20, 0.97);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.visor3d-modal .model-viewer-container {
+  background: #181818;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  padding: 32px 32px 24px 32px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.model-viewer {
+  border-radius: 12px;
+  background: #222;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  border: 1px solid #333;
+}
+
+.close-button {
+  position: absolute;
+  top: 18px;
+  right: 24px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 2.2rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: color 0.2s;
+}
+
+.close-button:hover {
+  color: #ff4c4c;
+}
+

@@ -1,0 +1,47 @@
+{
+  "folders": [
+    {
+      "path": "."
+    },
+    {
+      "path": "BACKEND"
+    }
+  ],
+  "settings": {
+    "editor.formatOnSave": true,
+    "prettier.requireConfig": true,
+    "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+    "eslint.autoFixOnSave": true,
+    "docker.enable": true
+  },
+  "launch": {
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Iniciar Backend con Nodemon",
+        "type": "node",
+        "request": "launch",
+        "runtimeExecutable": "nodemon",
+        "program": "${workspaceFolder}/BACKEND/server.js",
+        "restart": true,
+        "outFiles": ["${workspaceFolder}/BACKEND/**/*.js"],
+        "envFile": "${workspaceFolder}/.env"
+      },
+      {
+        "name": "Depurar Backend con Breakpoints",
+        "type": "node",
+        "request": "attach",
+        "processId": "${command:PickProcess}",
+        "restart": true
+      },
+      {
+        "name": "Run Tests",
+        "type": "node",
+        "request": "launch",
+        "program": "${workspaceFolder}/node_modules/.bin/jest",
+        "args": ["--runInBand"],
+        "outFiles": ["${workspaceFolder}/dist/**/*.js"]
+      }
+    ]
+  }
+}

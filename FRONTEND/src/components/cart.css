@@ -1,0 +1,227 @@
+.cart-container {
+  padding: 30px;
+  width: 1400px;
+}
+
+.cart-title {
+  font-size: 28px;
+  color: #FFFF;
+  margin-bottom: 20px;
+  margin-top: -20px;
+  text-align: left;
+}
+
+
+/* Contenedor de las dos columnas */
+.cart-content {
+  display: flex;
+  gap: 30px;
+}
+
+/* Columna izquierda (lista de assets) */
+.cart-list {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Columna derecha (resumen) */
+
+
+.download-summary p {
+  font-size: 16px;
+  margin: 10px 0;
+  color: #FFFF;
+}
+
+.download-btn {
+  margin-top: 20px;
+  padding: 10px 15px;
+  font-weight: bold;
+  background-color: #f4ce81;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: #f4ce81;
+}
+
+.cart-item {
+  display: flex;           /* fila en lugar de columna */
+  flex-direction: row;     /* imagen a la izquierda, texto a la derecha */
+  background-color: #1e3a5f;
+  border-radius: 12px;
+  overflow: hidden;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  gap: 20px;               /* espacio entre imagen y texto */
+}
+
+.cart-image-container {
+  flex: 0 0 200px;         /* ancho fijo para la imagen */
+  height: 150px;           /* altura fija para que no se deforme */
+  overflow: hidden;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+
+.cart-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.cart-info {
+  flex: 1;                 /* ocupa todo el espacio restante */
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.remove-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.cart-info h3 {
+  margin: 0;
+}
+
+.cart-info p {
+  font-size: 14px;
+  color: #ddd;
+}
+.download-summary {
+  background-color: #233342;
+  padding: 20px;
+  border-radius: 12px;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  max-width: 300px;
+  text-align: left;
+  height: 180px;
+}
+
+.summary-title {
+  font-size: 24px;
+  margin-bottom: 25px;
+  color: #ffffff;
+}
+
+.summary-count {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* Responsive compacto para tablets */
+@media (max-width: 1200px) {
+  .cart-container {
+    width: 98vw;
+    padding: 12px;
+    font-size: 15px;
+  }
+  .cart-title {
+    font-size: 1.5rem;
+  }
+  .cart-content {
+    gap: 12px;
+  }
+  .download-summary {
+    max-width: 220px;
+    padding: 12px;
+    font-size: 15px;
+  }
+  .cart-item {
+    min-height: 120px;
+  }
+}
+
+/* Responsive compacto para móviles */
+@media (max-width: 800px) {
+  .cart-container {
+    width: 100vw;
+    padding: 6px;
+    font-size: 14px;
+  }
+  .cart-title {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+  }
+  .cart-content {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .download-summary {
+    max-width: 100%;
+    width: 100%;
+    margin-top: 10px;
+    padding: 8px;
+    font-size: 14px;
+    text-align: center;
+  }
+  .cart-list {
+    gap: 8px;
+  }
+  .cart-item {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    min-width: 0;
+    min-height: 90px;
+    font-size: 13px;
+    padding: 6px;
+  }
+  .cart-image-container {
+    width: 100%;
+    height: 100px;
+    border-radius: 10px 10px 0 0;
+  }
+  .cart-info {
+    padding: 8px 6px;
+  }
+  .remove-btn {
+    top: 4px;
+    right: 4px;
+    font-size: 14px;
+    padding: 2px 6px;
+  }
+}
+
+/* Ultra compacto para móviles pequeños */
+@media (max-width: 500px) {
+  .cart-title {
+    font-size: 1rem;
+    margin-bottom: 6px;
+  }
+  .download-summary {
+    padding: 6px;
+    font-size: 12px;
+  }
+  .cart-info h3 {
+    font-size: 13px;
+  }
+  .cart-info p {
+    font-size: 11px;
+  }
+  .cart-item {
+    min-height: 70px;
+    font-size: 12px;
+    padding: 3px;
+  }
+}
